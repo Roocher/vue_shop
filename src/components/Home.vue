@@ -60,7 +60,6 @@
     </el-container>
   </el-container>
 </template>
-</template>
 
 <script>
 export default {
@@ -95,7 +94,7 @@ export default {
         return this.$message.console.error(res.meta.msg)
 
       // 获取列表成功
-      console.log(res.data)
+      // console.log(res.data)
       this.menulist = res.data
     },
     toggle() {

@@ -68,7 +68,7 @@ export default {
     login() {
       //点击登录的时候先调用validate方法验证表单内容是否有误
       this.$refs.LoginFormRef.validate(async valid => {
-        console.log(this.loginFormRules)
+        // console.log(this.loginFormRules)
         //如果valid参数为true则验证通过
         if (!valid) {
           return
@@ -78,7 +78,8 @@ export default {
         const { data: res } = await this.$http.post('login', this.loginForm)
         //   console.log(res);
         if (res.meta.status !== 200) {
-          return this.$message.error('登录失败:' + res.meta.msg) //console.log("登录失败:"+res.meta.msg)
+          return this.$message.error('登录失败:' + res.meta.msg) 
+        //console.log("登录失败:"+res.meta.msg)
         }
 
         this.$message.success('登录成功')
