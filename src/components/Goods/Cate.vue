@@ -163,7 +163,7 @@ export default {
   },
   methods: {
     async getCategories() {
-      // 发送请求获取用户数据
+      // 发送请求获取分类数据
       const { data: res } = await this.$http.get('categories', {
         params: this.queryInfo
       })
